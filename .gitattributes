@@ -7,3 +7,4 @@ module.prop text eol=lf
 # vendor 由来のファイルと配布 zip はバイト列をそのまま保持する
 *.xml -text
 *.zip -text
+*.jar -text

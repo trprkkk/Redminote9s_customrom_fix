@@ -1,0 +1,6 @@
+id=softap_5g_fix
+name=SoftAP 5GHz Fix (JP / HyperOS)
+version=1.0
+versionCode=1
+author=trprkkk
+description=Removes MIUI's Japan-only 2.4GHz SoftAP forcing by patching miui-wifi-service.jar, and pins the Wi-Fi country code to JP so 5GHz tethering works without a 5GHz upstream. Based on MiuiWifiApManager/MiuiWifiService analysis for curtana (Redmi Note 9S).

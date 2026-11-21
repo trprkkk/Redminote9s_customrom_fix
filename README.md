@@ -7,6 +7,7 @@ Redmi Note 9S (curtana) / Note 9 Pro (miatoll) 系のカスタムROMで発生す
 | 修正 | 対象 | 症状 | 状態 |
 | --- | --- | --- | --- |
 | [TAS2562 / ADSP 音声クラッシュ修正](fixes/tas2562-adsp-audio-crash/) | curtana (miatoll) | 動画再生が「少し動く → 止まる」を繰り返す | 検証済み |
+| [SoftAP 5GHz 修正 (日本向け制限解除)](fixes/softap-5ghz-jp/) | curtana (miatoll) | Wi-Fi未接続時にテザリングが2.4GHz固定になる / 5GHz親機を切ると2.4GHzへ戻る | 検証済み |
 
 ## 使い方
 
@@ -22,9 +23,12 @@ Redmi Note 9S (curtana) / Note 9 Pro (miatoll) 系のカスタムROMで発生す
 fixes/
   <修正名>/
     README.md          … 症状・原因・修正内容・検証結果
+    patches/           … バイナリ/ソースの差分（任意）
+    tools/             … 再パッチ・設定用スクリプト（任意）
     module/            … Magisk / KernelSU モジュールのソース
       module.prop
-      system/vendor/etc/...
+      system/...       … /system 配下を置き換える場合
+      system_ext/...   … /system_ext 配下を置き換える場合
     dist/              … ビルド済みモジュール zip
 tools/
   build-module.ps1     … モジュール zip のビルドスクリプト
@@ -33,7 +37,7 @@ tools/
 ## 修正を追加する場合
 
 1. `fixes/<修正名>/` を作成する
-2. `module/module.prop` と、置き換えるファイルを `module/system/...` に配置する
+2. `module/module.prop` と、置き換えるファイルを `module/system/...` または `module/system_ext/...` に配置する
 3. `fixes/<修正名>/README.md` に症状・原因・検証結果を書く
 4. モジュール zip をビルドする
 
