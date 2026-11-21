@@ -1,0 +1,6 @@
+id=ims_sms_restore
+name=IMS / SMS Restore (KDDI povo / au)
+version=1.0
+versionCode=1
+author=trprkkk
+description=Re-enables org.codeaurora.ims and reinstalls com.qti.phone for user 0 after boot. Restores SMS over IMS on KDDI povo/au when a previous crash workaround disabled those packages. May not apply to ROMs with different IMS package names.

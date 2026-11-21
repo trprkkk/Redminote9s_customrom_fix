@@ -1,0 +1,6 @@
+id=thermal_cp_panic_fix
+name=Thermal CP Panic Fix (curtana JP / CN-port)
+version=2.0
+versionCode=3
+author=trprkkk
+description=Prevents the smblib_set_prop_system_temp_level NULL-deref panic on Japan-market curtana devices running CN-port ROMs by removing BATTERY_CHARGING_STL actions from thermal-engine configs at boot. May not work on ROMs with different thermal config paths or section names.

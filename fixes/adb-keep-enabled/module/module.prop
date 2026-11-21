@@ -1,0 +1,6 @@
+id=adb_keep_enabled
+name=ADB Keep Enabled
+version=1.0
+versionCode=1
+author=trprkkk
+description=Re-applies settings put global adb_enabled 1 after boot on ROMs that turn USB debugging off automatically. Optionally enables Wi-Fi ADB on port 5555 (commented out by default).

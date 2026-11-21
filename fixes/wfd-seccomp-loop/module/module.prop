@@ -1,0 +1,6 @@
+id=wfd_seccomp_fix
+name=WFD Seccomp Loop Fix (experimental)
+version=1.0
+versionCode=1
+author=trprkkk
+description=EXPERIMENTAL. Adds gettimeofday to the seccomp policies of wfdvndservice and wfdhdcphalservice at boot. Works around the 5-second crash/restart loop seen when the vendor seccomp policy blocks gettimeofday. Verify the policy paths and format on your ROM first.

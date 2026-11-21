@@ -2,6 +2,14 @@
 
 このリポジトリでは、1 つの修正を `fixes/<修正名>/` にまとめます。修正名は英小文字とハイフンにしてください。
 
+## ROM 依存性
+
+各修正は、特定の端末・ROM・vendor・カーネルの組み合わせで検証したものです。
+同じ端末でも、ROM のバージョンや移植元、vendor の内容、カーネルによって
+**使える場合と使えない場合があります**。修正が適用されないだけでなく、
+起動不能・VoLTE 喪失・充電不良などを起こす可能性もあります。
+README には、どの環境で検証したかと、どの条件で使えなくなるかを必ず書いてください。
+
 ## ディレクトリ構成
 
 ```
@@ -10,6 +18,8 @@ fixes/<修正名>/
 ├── <任意の差分ファイル>.patch     参考用の diff（任意）
 ├── module/                        Magisk / KernelSU モジュールのソース
 │   ├── module.prop                id / name / version / versionCode / author / description
+│   ├── post-fs-data.sh            起動前の実行時パッチ（任意）
+│   ├── service.sh                 起動後の処理（任意）
 │   └── system/...                 置き換えるファイル
 └── dist/                          ビルド済み zip（リポジトリにコミットする）
     └── <id>-v<version>.zip
@@ -18,7 +28,9 @@ fixes/<修正名>/
 ## 追加手順
 
 1. `fixes/<修正名>/module/module.prop` を作成する
-2. 置き換えるファイルを `fixes/<修正名>/module/system/...` に配置する
+2. 必要なファイルを `module/` に配置する
+   - system ファイルを置き換える場合: `module/system/...` または `module/system_ext/...`
+   - 起動時にパッチする場合: `module/post-fs-data.sh` / `module/service.sh`
 3. `fixes/<修正名>/README.md` を書く
    - 症状
    - 動作確認環境（端末・ROM・vendor）
