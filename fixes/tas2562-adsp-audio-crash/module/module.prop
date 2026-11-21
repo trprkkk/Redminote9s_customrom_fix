@@ -1,0 +1,6 @@
+id=tas2562-speaker-acdb-fix
+name=TAS2562 Speaker ACDB Fix (curtana)
+version=1.1
+versionCode=2
+author=trprkkk
+description=Uses the plain speaker ACDB path (acdb_id 15) instead of 10011 to stop repeated ADSP audio_process crashes and video playback stalls on HyperOS-based custom ROMs for curtana/miatoll.
