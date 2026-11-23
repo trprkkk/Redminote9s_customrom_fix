@@ -20,6 +20,8 @@ fixes/<修正名>/
 │   ├── module.prop                id / name / version / versionCode / author / description
 │   ├── post-fs-data.sh            起動前の実行時パッチ（任意）
 │   ├── service.sh                 起動後の処理（任意）
+│   ├── action.sh                  アクションボタンの処理（任意）
+│   ├── uninstall.sh               アンインストール時の処理（任意）
 │   └── system/...                 置き換えるファイル
 └── dist/                          ビルド済み zip（リポジトリにコミットする）
     └── <id>-v<version>.zip
@@ -31,6 +33,8 @@ fixes/<修正名>/
 2. 必要なファイルを `module/` に配置する
    - system ファイルを置き換える場合: `module/system/...` または `module/system_ext/...`
    - 起動時にパッチする場合: `module/post-fs-data.sh` / `module/service.sh`
+   - アクションボタンを使う場合: `module/action.sh`
+   - アンインストール時の処理: `module/uninstall.sh`
 3. `fixes/<修正名>/README.md` を書く
    - 症状
    - 動作確認環境（端末・ROM・vendor）

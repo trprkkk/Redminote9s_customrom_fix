@@ -12,6 +12,7 @@ Redmi Note 9S (curtana) / Note 9 Pro (miatoll) 系のカスタムROMで発生す
 | [IMS / SMS 復帰](fixes/ims-sms-restore/) | curtana / KDDI povo・au | IMS無効化後にSMSが届かない | 検証済み（手動コマンド） |
 | [ADB 常時有効化](fixes/adb-keep-enabled/) | 共通 | USBデバッグが起動後に自動でオフになる | 検証済み |
 | [WFD seccomp ループ修正](fixes/wfd-seccomp-loop/) | 共通 | `wfdvndservice` が約5秒ごとにクラッシュ | 未検証（実験的） |
+| [Wi-Fi バンド優先/強制](fixes/wifi-band-preference/) | 共通 / Android 13+ | 同じSSIDの2.4GHz/5GHz APを端末側で選べない（ホテル等） | 検証済み（強制モード） |
 
 ## ROM 依存性について
 
