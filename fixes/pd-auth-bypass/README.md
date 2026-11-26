@@ -37,7 +37,7 @@ data role swap が失敗し、`usbpd_verifed=0` になります。
 Magisk/KernelSU の `service.sh` で、次を行います。
 
 1. 起動後に `setprop ctl.stop batterysecret` で認証サービスを停止
-   （30秒ごとに再起動していないか確認し、再開していれば再度停止）
+   （2秒ごとに再起動していないか確認し、再開していれば再度停止）
 2. USB 接続中は `/sys/class/power_supply/usb/pd_authentication` に `1` を書く
 3. `pd_active=1` かつ電圧が 7V 未満なら、PDO 1〜7 から
    9V の PDO を探し、その番号を
@@ -53,7 +53,7 @@ Magisk/KernelSU の `service.sh` で、次を行います。
 - 修正前: 5V / 1.8A（約9W）
 - 修正後: 8.66V / 1.98A（入力約17W）
 - `pd_active=1`、`contract=explicit`、`pdo2=9V`、`select_pdo=2`
-- 充電器を挿した直後は 5V（PDO 1）でも、約2秒で 9V（PDO 2）へ自動遷移
+- 充電器を挿した直後は 5V（PDO 1）でも、約2〜6秒で 9V（PDO 2）へ自動遷移
 - PD ハードリセット後も 8 秒以内に 9V へ自動復帰
 - `batterysecret` は `stopped`、`pd_authentication=1` を維持
 
