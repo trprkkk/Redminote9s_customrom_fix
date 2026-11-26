@@ -1,0 +1,6 @@
+id=pd_auth_bypass
+name=PD Authentication Bypass (curtana)
+version=1.0
+versionCode=1
+author=trprkkk
+description=Stops Xiaomi batterysecret, keeps usb/pd_authentication=1, and re-selects a 9V PDO so third-party PD chargers are not limited to 5V/1.8A. ROM-dependent; bypasses Xiaomi PD authentication.

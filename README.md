@@ -9,6 +9,7 @@ Redmi Note 9S (curtana) / Note 9 Pro (miatoll) 系のカスタムROMで発生す
 | [TAS2562 / ADSP 音声クラッシュ修正](fixes/tas2562-adsp-audio-crash/) | curtana (miatoll) | 動画再生が「少し動く → 止まる」を繰り返す | 検証済み |
 | [SoftAP 5GHz 修正 (日本向け制限解除)](fixes/softap-5ghz-jp/) | curtana (miatoll) | Wi-Fi未接続時にテザリングが2.4GHz固定になる / 5GHz親機を切ると2.4GHzへ戻る | 検証済み |
 | [Thermal CP パニック修正](fixes/thermal-cp-panic/) | curtana (Japan) + CNポートROM | QC/PD (PPS/QC3) 充電中にカーネルパニックで再起動 | 検証済み |
+| [PD 認証バイパス (サードパーティ PD 充電器)](fixes/pd-auth-bypass/) | curtana + CNポートROM | Anker 等の PD 充電器が 5V/1.8A (約10W) 止まり | 検証済み（PD認証バイパス） |
 | [IMS / SMS 復帰](fixes/ims-sms-restore/) | curtana / KDDI povo・au | IMS無効化後にSMSが届かない | 検証済み（手動コマンド） |
 | [ADB 常時有効化](fixes/adb-keep-enabled/) | 共通 | USBデバッグが起動後に自動でオフになる | 検証済み |
 | [WFD seccomp ループ修正](fixes/wfd-seccomp-loop/) | 共通 | `wfdvndservice` が約5秒ごとにクラッシュ | 未検証（実験的） |
